@@ -2,13 +2,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const SuccessComponent = ({
-  onContinue,
-  onGoBack,
-}: {
-  onContinue: () => null;
-  onGoBack: () => null;
-}) => {
+const SuccessComponent = () => {
   const route = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 flex items-center justify-center p-4">
@@ -43,11 +37,10 @@ const SuccessComponent = ({
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed">
             Welcome aboard! Your account has been successfully created and
-            you're ready to get started.
+            you&apos;re ready to get started.
           </p>
         </div>
 
-        {/* Action Buttons */}
         <div className="space-y-4 mb-6">
           <button
             onClick={() => route.push("/dashboard")}

@@ -205,7 +205,7 @@ export default function VerifyEmail() {
                   <li>
                     • Check if you clicked the correct link from your email
                   </li>
-                  <li>• Make sure the link hasn't been used before</li>
+                  <li>• Make sure the link hasn&apos;t been used before</li>
                   <li>
                     • Request a new verification email if this one expired
                   </li>
