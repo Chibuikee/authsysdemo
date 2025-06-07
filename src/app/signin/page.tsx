@@ -36,7 +36,7 @@ export default function SignIn() {
         // Handle successful sign in
         console.log("Sign in successful:", data);
         // Redirect to dashboard or handle success
-        window.location.href = "/dashboard";
+        window.location.href = `/dashboard?id=${data?.user_id}`;
       } else {
         setError(data.message || "Sign in failed. Please try again.");
       }
