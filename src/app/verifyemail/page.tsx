@@ -228,15 +228,15 @@ export default function VerifyEmail() {
           <div className="space-y-3">
             <button
               onClick={() =>
-                (window.location.href = "/auth/resend-verification")
+                (window.location.href = "/")
               }
               className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
             >
-              Request New Verification Link
+              Home page
             </button>
 
             <button
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => (window.location.href = "/signin")}
               className="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors"
             >
               Back to Sign In
