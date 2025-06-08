@@ -34,12 +34,8 @@ export default function VerifyEmail() {
       );
       console.log(res);
       // Check if verification was successful
-      if (res.status === 200 && res?.data) {
+      if ( res?.data) {
         setIsVerified(true);
-      } else {
-        setError(
-          "Invalid verification link. Please check your email for the correct link."
-        );
       }
     } catch (error: any) {
       console.log(error?.response?.data?.errors);
