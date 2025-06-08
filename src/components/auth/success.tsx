@@ -43,10 +43,10 @@ const SuccessComponent = () => {
 
         <div className="space-y-4 mb-6">
           <button
-            onClick={() => route.push("/dashboard")}
+            onClick={() => route.push("/signin")}
             className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
           >
-            Continue to Dashboard
+            Continue to login
           </button>
 
           <button
