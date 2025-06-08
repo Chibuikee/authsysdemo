@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import { KeyboardEventHandler, useState } from "react";
+import { useState } from "react";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -40,6 +40,7 @@ export default function SignIn() {
       } else {
         setError(data.message || "Sign in failed. Please try again.");
       }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       console.log(err?.response?.data?.errors);
       if (
@@ -246,7 +247,7 @@ export default function SignIn() {
 
         <div className="mt-8 pt-6 border-t border-gray-200 text-center">
           <p className="text-gray-600">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <button
               onClick={() => (window.location.href = "/signup")}
               className="text-indigo-600 hover:text-indigo-700 cursor-pointer font-semibold transition-colors"

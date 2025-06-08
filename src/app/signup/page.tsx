@@ -137,8 +137,8 @@ export default function SignupPage() {
       console.log("Registration error:", error);
 
       if (axios.isAxiosError(error)) {
-        const status = error.response?.status;
-        const message = error.response?.data?.message || error.message;
+        // const status = error.response?.status;
+        // const message = error.response?.data?.message || error.message;
         setErrorState("general");
 
         // switch (status) {
