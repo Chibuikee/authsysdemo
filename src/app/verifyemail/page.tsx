@@ -134,7 +134,7 @@ export default function VerifyEmail() {
               </button>
 
               <button
-                onClick={() => (window.location.href = "/login")}
+                onClick={() => (window.location.href = "/signin")}
                 className="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors"
               >
                 Sign In to Your Account
