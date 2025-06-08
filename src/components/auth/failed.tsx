@@ -54,14 +54,14 @@ const ErrorComponent: React.FC<ErrorComponentProps> = ({
       case "network":
         return {
           title: "Connection Failed",
-          message: "Unable to connect to our servers.",
+          message: errorMessage || "Unable to connect to our servers.",
           suggestion: "Please check your internet connection and try again.",
           color: "blue",
         };
       case "server":
         return {
           title: "Server Error",
-          message: "Something went wrong on our end.",
+          message: errorMessage || "Something went wrong on our end.",
           suggestion: "Please try again in a few minutes.",
           color: "red",
         };

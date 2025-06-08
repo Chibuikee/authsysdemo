@@ -32,7 +32,7 @@ export default function VerifyEmail() {
         // `http://127.0.0.1:8000/api/v1/auth/confirm-account`,
         { token: token }
       );
-
+      console.log(res);
       // Check if verification was successful
       if (res.status === 200 && res?.data) {
         setIsVerified(true);
@@ -121,10 +121,10 @@ export default function VerifyEmail() {
 
             <div className="space-y-3">
               <button
-                onClick={() => (window.location.href = "/dashboard")}
+                onClick={() => (window.location.href = "/")}
                 className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                Go to Dashboard
+                Go to Home
               </button>
 
               <button

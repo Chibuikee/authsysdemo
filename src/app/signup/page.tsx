@@ -38,6 +38,7 @@ export default function SignupPage() {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [status, setStatus] = useState<string | null>(null);
   const [errorState, setErrorState] = useState<string | null>(null);
+  const [errorMessage, setMessage] = useState<string | null>(null);
 
   const validateForm = (): boolean => {
     const newErrors: ValidationErrors = {};
@@ -80,7 +81,7 @@ export default function SignupPage() {
     }
 
     // Phone validation (optional but validate if provided)
-    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+    const phoneRegex = /^[\+]?[0-9][\d]{0,15}$/;
     if (
       formData.phone &&
       !phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ""))
@@ -134,9 +135,21 @@ export default function SignupPage() {
         // Optional: redirect or reset form
         // navigate('/login') or setFormData(initialState)
       }
-    } catch (error: unknown) {
+    } catch (error: any) {
       console.log("Registration error:", error);
-
+      if (
+        error?.response?.data?.errors &&
+        typeof error?.response?.data?.errors == "string"
+      ) {
+        setMessage(error?.response?.data?.errors);
+      }
+      if (
+        error?.response?.data?.errors &&
+        typeof error?.response?.data?.errors !== "string"
+      ) {
+        setMessage(error?.response?.data?.errors[0]);
+      }
+      // setMessage(error?.response?.data?.erros[0])
       if (axios.isAxiosError(error)) {
         // const status = error.response?.status;
         // const message = error.response?.data?.message || error.message;
@@ -167,7 +180,12 @@ export default function SignupPage() {
     }
   };
   if (errorState) {
-    return <ErrorComponent onRetry={() => setErrorState(null)} />;
+    return (
+      <ErrorComponent
+        errorMessage={errorMessage || undefined}
+        onRetry={() => setErrorState(null)}
+      />
+    );
   }
   return (
     <>
@@ -481,7 +499,7 @@ export default function SignupPage() {
                 <p className="text-sm text-gray-600">
                   Already have an account?{" "}
                   <a
-                    href="#"
+                    href="/signin"
                     className="text-blue-600 hover:text-blue-500 font-medium"
                   >
                     Sign in
