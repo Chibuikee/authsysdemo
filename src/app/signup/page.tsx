@@ -119,7 +119,8 @@ export default function SignupPage() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/v1/auth/sign-up",
+        "https://authsysbackend-cfqp.onrender.com/api/v1/auth/sign-up",
+        // "http://127.0.0.1:8000/api/v1/auth/sign-up",
         {
           ...formData,
         }

@@ -28,7 +28,8 @@ export default function VerifyEmail() {
     try {
       // Make API call to verify the email token
       const res = await axios.post(
-        `http://127.0.0.1:8000/api/v1/auth/confirm-account`,
+        `https://authsysbackend-cfqp.onrender.com/api/v1/auth/confirm-account`,
+        // `http://127.0.0.1:8000/api/v1/auth/confirm-account`,
         { token: token }
       );
 

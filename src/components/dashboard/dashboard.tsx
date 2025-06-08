@@ -37,8 +37,11 @@ const UserProfileComponent: React.FC = () => {
       setLoading(true);
       setError(null);
       const response = await axios.get<UserData>(
-        `http://127.0.0.1:8000/api/v1/auth/users/${user_id}`
+        `https://authsysbackend-cfqp.onrender.com/api/v1/auth/users/${user_id}`
+        // `https://authsysbackend-cfqp.onrender.com/api/v1/auth/users/${user_id}`
+        // `http://127.0.0.1:8000/api/v1/auth/users/${user_id}`
       );
+      console.log(response);
       setUserData(response.data);
     } catch (err) {
       const axiosError = err as AxiosError<ApiError>;
