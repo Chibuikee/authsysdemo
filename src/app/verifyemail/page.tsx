@@ -41,14 +41,24 @@ export default function VerifyEmail() {
           "Invalid verification link. Please check your email for the correct link."
         );
       }
-    } catch (err: any) {
-      console.log(err?.response?.data?.errors);
+    } catch (error: any) {
+      console.log(error?.response?.data?.errors);
       // Handle different types of errors
-      if (err?.response?.data?.errors) {
-        if (err?.response?.data?.errors[0]) {
-          setIsExpired(true);
-          setError(err?.response?.data?.errors[0]);
-        }
+
+      console.log("Registration error:", error);
+      if (
+        error?.response?.data?.errors &&
+        typeof error?.response?.data?.errors == "string"
+      ) {
+        setIsExpired(true);
+        setError(error?.response?.data?.errors);
+      }
+      if (
+        error?.response?.data?.errors &&
+        typeof error?.response?.data?.errors !== "string"
+      ) {
+        setIsExpired(true);
+        setError(error?.response?.data?.errors[0]);
       }
     } finally {
       setIsLoading(false);
