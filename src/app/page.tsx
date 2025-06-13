@@ -10,10 +10,7 @@ const Home: React.FC = () => {
   const [navScrolled, setNavScrolled] = useState<boolean>(false);
 
   const navigationItems: NavigationItem[] = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#features", label: "Features" },
-    { href: "#contact", label: "Contact" },
+    { href: "#home", label: "Home" }
   ];
 
   useEffect(() => {

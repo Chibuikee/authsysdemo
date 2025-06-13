@@ -35,12 +35,8 @@ export default function VerifyEmail() {
       );
       console.log(res);
       // Check if verification was successful
-      if (res.status === 200 && res?.data) {
+      if ( res?.data) {
         setIsVerified(true);
-      } else {
-        setError(
-          "Invalid verification link. Please check your email for the correct link."
-        );
       }
     } catch (error: any) {
       console.log(error?.response?.data?.errors);
@@ -139,7 +135,7 @@ export default function VerifyEmail() {
               </button>
 
               <button
-                onClick={() => (window.location.href = "/login")}
+                onClick={() => (window.location.href = "/signin")}
                 className="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors"
               >
                 Sign In to Your Account
@@ -229,15 +225,15 @@ export default function VerifyEmail() {
           <div className="space-y-3">
             <button
               onClick={() =>
-                (window.location.href = "/auth/resend-verification")
+                (window.location.href = "/")
               }
               className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
             >
-              Request New Verification Link
+              Home page
             </button>
 
             <button
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => (window.location.href = "/signin")}
               className="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors"
             >
               Back to Sign In
