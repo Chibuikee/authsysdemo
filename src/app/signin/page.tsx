@@ -126,7 +126,7 @@ export default function SignIn() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 // onKeyDown={handleKeyPress}
-                className="w-full px-4 py-3 pl-11 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors bg-gray-50 focus:bg-white"
+                className="w-full px-4 py-3 pl-11 border text-black border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors bg-gray-50 focus:bg-white"
                 placeholder="Enter your email"
               />
               <svg
@@ -155,7 +155,7 @@ export default function SignIn() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 // onKeyPress={handleKeyPress}
-                className="w-full px-4 py-3 pl-11 pr-11 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors bg-gray-50 focus:bg-white"
+                className="w-full px-4 py-3 pl-11 pr-11 border text-black border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors bg-gray-50 focus:bg-white"
                 placeholder="Enter your password"
               />
               <svg

@@ -236,7 +236,7 @@ export default function SignupPage() {
                     name="full_name"
                     value={formData.full_name}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                    className={`w-full text-black px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.full_name
                         ? "border-red-300 bg-red-50"
                         : "border-gray-300"
@@ -275,7 +275,7 @@ export default function SignupPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                    className={`w-full px-4 py-3 border text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.email
                         ? "border-red-300 bg-red-50"
                         : "border-gray-300"
@@ -315,7 +315,7 @@ export default function SignupPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 text-black focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.phone
                         ? "border-red-300 bg-red-50"
                         : "border-gray-300"
@@ -353,7 +353,7 @@ export default function SignupPage() {
                     name="role"
                     value={formData.role}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 text-black focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.role
                         ? "border-red-300 bg-red-50"
                         : "border-gray-300"
@@ -395,7 +395,7 @@ export default function SignupPage() {
                     name="password"
                     value={formData.password}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 text-black focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.password
                         ? "border-red-300 bg-red-50"
                         : "border-gray-300"
@@ -434,7 +434,7 @@ export default function SignupPage() {
                     name="confirm_password"
                     value={formData.confirm_password}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 text-black focus:ring-blue-500 focus:border-transparent transition-colors ${
                       errors.confirm_password
                         ? "border-red-300 bg-red-50"
                         : "border-gray-300"
