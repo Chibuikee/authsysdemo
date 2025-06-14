@@ -120,7 +120,8 @@ export default function SignupPage() {
 
     try {
       const res = await axios.post(
-        "http://13.53.36.102/api/v1/auth/sign-up",
+        "https://www.bytealpha.online/api/v1/auth/sign-up",
+        // "http://13.53.36.102/api/v1/auth/sign-up",
         // "https://authsysbackend-cfqp.onrender.com/api/v1/auth/sign-up",
         // "http://127.0.0.1:8000/api/v1/auth/sign-up",
         {

@@ -37,7 +37,8 @@ const UserProfileComponent: React.FC = () => {
       setLoading(true);
       setError(null);
       const response = await axios.get<UserData>(
-        `http://13.53.36.102/api/v1/auth/users/${user_id}`
+        `https://www.bytealpha.online/api/v1/auth/users/${user_id}`
+        // `http://13.53.36.102/api/v1/auth/users/${user_id}`
         // `https://authsysbackend-cfqp.onrender.com/api/v1/auth/users/${user_id}`
         // `https://authsysbackend-cfqp.onrender.com/api/v1/auth/users/${user_id}`
         // `http://127.0.0.1:8000/api/v1/auth/users/${user_id}`

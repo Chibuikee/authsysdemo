@@ -28,14 +28,15 @@ export default function VerifyEmail() {
     try {
       // Make API call to verify the email token
       const res = await axios.post(
-        `http://13.53.36.102/api/v1/auth/confirm-account`,
+        `https://www.bytealpha.online/api/v1/auth/confirm-account`,
+        // `http://13.53.36.102/api/v1/auth/confirm-account`,
         // `https://authsysbackend-cfqp.onrender.com/api/v1/auth/confirm-account`,
         // `http://127.0.0.1:8000/api/v1/auth/confirm-account`,
         { token: token }
       );
       console.log(res);
       // Check if verification was successful
-      if ( res?.data) {
+      if (res?.data) {
         setIsVerified(true);
       }
     } catch (error: any) {
@@ -224,9 +225,7 @@ export default function VerifyEmail() {
 
           <div className="space-y-3">
             <button
-              onClick={() =>
-                (window.location.href = "/")
-              }
+              onClick={() => (window.location.href = "/")}
               className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
             >
               Home page
